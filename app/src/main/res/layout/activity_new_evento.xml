@@ -4,6 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".newEvento">
+    tools:context="newEvento">
+
+    <include
+        android:id="@+id/mytoolbar"
+        layout="@layout/mytoolbar"
+        />
+
+
+    <EditText
+        android:id="@+id/eventoEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Nombre del evento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_titulo" />
+
+
+    <EditText
+        android:id="@+id/cursoEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:hint="Nombre del curso"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_titulo"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/guardarButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="332dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventoEditText"
+        app:strokeColor="#2E86C1" />
+
+    <TextView
+        android:id="@+id/TV_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Nuevo Evento"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mytoolbar" />
+
+    <ImageButton
+        android:id="@+id/ib_dia"
+        android:layout_width="51dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#2E86C1"
+        app:layout_constraintBottom_toTopOf="@+id/ib_hora"
+        app:layout_constraintEnd_toStartOf="@+id/tv_dia"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.942"
+        app:srcCompat="@drawable/baseline_calendar_month_24" />
+
+    <ImageButton
+        android:id="@+id/ib_hora"
+        android:layout_width="51dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#2E86C1"
+        app:layout_constraintBottom_toTopOf="@+id/guardarButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_access_time_filled_24" />
+
+    <TextView
+        android:id="@+id/tv_dia"
+        android:layout_width="165dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="80dp"
+        android:text="Fecha"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_hora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896" />
+
+    <TextView
+        android:id="@+id/tv_hora"
+        android:layout_width="159dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="28dp"
+        android:text="Hora"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guardarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toEndOf="@+id/ib_hora" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

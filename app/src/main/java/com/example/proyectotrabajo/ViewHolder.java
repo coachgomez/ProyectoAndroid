@@ -16,7 +16,6 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         tvtitulo = itemView.findViewById(R.id.tvtitulo);
         tvCurso = itemView.findViewById(R.id.tvCurso);
-        buttonConfig = itemView.findViewById(R.id.ButtonConfig);
         buttonDelete = itemView.findViewById(R.id.ButtonDelete);
     }
 }
